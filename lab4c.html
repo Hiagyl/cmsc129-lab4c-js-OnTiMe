@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Form</title>
+        <script src="lab4c_scripts.js" defer></script>
+    </head>
+    <body>
+        <button onclick="time_now()">Show Current Date</button>
+        <p id = "displayDate"></p>
+        <h2>Add Student</h2>
+        <form id="studentForm" onsubmit="validateForm(event)">
+            <div>
+                <label for="studentNumber">Student Number: </label>
+                <input type="number" id="studentNumber" required><br><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br><br>
+                <label for="age">Age:</label>
+                <input type="number" id="age" required><br><br>
+                <label for="email">UP Email:</label>
+                <input type="email" id="upEmail" required><br><br>
+                <label for="course">Course:</label>
+                <select id="course">
+            </div>
+                <option value="BA Food Appreciation">BA Food Appreciation</option>
+                <option value="BA Applied Poetry of the Future">BA Applied Poetry of the Future</option>
+                <option value="BS Computer Repair Shop">BS Computer Repair Shop</option>
+                <option value="BS Video Gaming">BS Video Gaming</option>
+                <option value="BS Installing and Downloading">BS Installing and Downloading</option>
+            </select><br><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Search Student</h2>
+        <label for="searchStudentNum">Search for Student Number: </label><br><br>
+        <input type="text" id="searchStudentNum" placeholder="Enter student number"><br><br>
+        <button onclick="searchStudent()">Search</button>
+        <p id="searchResults"></p>
+        
+        <h2>Display ALL Students</h2>
+        <button onclick="displayStudents()">Display All Students</button>
+        <p id="studentList"></p>
+    </body>
+</html>
